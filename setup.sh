@@ -2,7 +2,7 @@
 peinstall='https://pm.puppet.com/cgi-bin/download.cgi?dist=el&rel=9&arch=x86_64&ver=latest'
 
 dnf update -y --quiet
-dnf install -y --quiet langpacks-de tar epel-release bash-completion vim jq git emacs tig
+dnf install -y --quiet langpacks-de tar epel-release bash-completion vim jq git emacs
 
 cat >~/pe.conf <<PECONF
 {
