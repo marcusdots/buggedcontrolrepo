@@ -9,4 +9,4 @@ file_line{ 'foo':
   tag     => 'kleine_kollekte',
 }
 
-file_line <<| tag == 'kleine_kollekte' |>>
+File_line <<| tag == 'kleine_kollekte' |>>
