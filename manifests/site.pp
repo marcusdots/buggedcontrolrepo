@@ -14,4 +14,6 @@ File_line <<| tag == 'kleine_kollekte' |>>
 $query = "inventory[certname] { }"
 $nodes = puppetdb_query($query).map |$value| { $value["certname"] }
 notify { $nodes: }
-notify { puppetdb_query($query):} 
+notify { 'foo':
+  message => puppetdb_query($query),
+} 
