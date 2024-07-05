@@ -10,3 +10,7 @@ file_line{ 'foo':
 }
 
 File_line <<| tag == 'kleine_kollekte' |>>
+
+$query = "inventory[certname] { }"
+$nodes = puppetdb_query($query).map |$value| { $value["certname"] }
+notice { $nodes: }
