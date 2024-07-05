@@ -8,3 +8,5 @@ file_line{ 'foo':
   content => $facts['networking']['hostname'],
   tag     => 'kleine_kollekte',
 }
+
+file_line <<| tag == 'kleine_kollekte' |>>
