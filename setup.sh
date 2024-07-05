@@ -23,4 +23,5 @@ tar xf puppet-enterprise-*-x86_64.tar.gz
 rm -f puppet-enterprise-*.tar.gz
 cd puppet-enterprise-*-x86_64/
 ./puppet-enterprise-installer -c ~/pe.conf
+echo 'topsecret-thahj^oht3uph4ahSa0t' | puppet access login --username admin --lifetime=4y
 puppet infra console_password
