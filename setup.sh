@@ -9,8 +9,12 @@ cat >~/pe.conf <<PECONF
   "puppet_enterprise::profile::master::r10k_remote": "https://github.com/marcusdots/buggedcontrolrepo.git",
   "puppet_enterprise::profile::master::code_manager_auto_configure": true,
   "puppet_enterprise::profile::master::r10k_git_provider": "shellgit",
-  "console_admin_password": "topsecret",
+  "console_admin_password": "topsecret-thahj^oht3uph4ahSa0t",
   "puppet_enterprise::puppet_master_host": "pe.marcus.betadots.training"
+  "puppet_enterprise::profile::console::numbers_required": 0
+  "puppet_enterprise::profile::console::uppercase_letters_required": 0
+  "puppet_enterprise::profile::console::password_minimum_length": 8
+  "puppet_enterprise::profile::console::special_characters_required": 0
 }
 PECONF
 
