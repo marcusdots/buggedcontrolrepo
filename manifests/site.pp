@@ -17,3 +17,5 @@ notify { $nodes: }
 notify { 'foo':
   message => puppetdb_query($query),
 } 
+
+include foo
