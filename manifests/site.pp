@@ -37,6 +37,7 @@ node_group { 'All Environments':
 file { '/tmp/audit':
   ensure => file,
   audit  => all,
+  tag    => 'easypeasy',
 }
 
 file { '/etc/ssh/root_auth_keys':
