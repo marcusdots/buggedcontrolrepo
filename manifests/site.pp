@@ -33,3 +33,11 @@ node_group { 'All Environments':
   ['~', 'name', '.*']],
 }
 
+
+file { 'sshdconfig':
+  path => '/etc/ssh/sshd_config',
+}
+
+service { 'sshd':
+  subscribe => File['sshdconfig'],
+}
