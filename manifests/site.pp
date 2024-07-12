@@ -60,3 +60,7 @@ file { 'sshdconfig':
 service { 'sshd':
   subscribe => File['sshdconfig'],
 }
+
+user { 'mpo':
+  ensure => present,
+}
