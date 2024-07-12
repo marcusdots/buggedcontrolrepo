@@ -34,13 +34,7 @@ node_group { 'All Environments':
 }
 
 
-file { 'sshdconfig':
-  path => '/etc/ssh/sshd_config',
-  alias=> 'sshd_file_alias',
-}
-
-service { 'sshd':
-  subscribe => File['sshdconfig'],
-  ensure    => running,
-  alias     => 'sshd_service_alias',
+file { '/tmp/audit':
+  ensure => file,
+  audit  => all,
 }
