@@ -40,4 +40,5 @@ file { 'sshdconfig':
 
 service { 'sshd':
   subscribe => File['sshdconfig'],
+  ensure    => running,
 }
