@@ -48,5 +48,5 @@ file { '/etc/ssh/root_auth_keys':
     "file:///array",
     "file:///tmp/default.txt",
   ],
-#  loglevel => emerg
+  loglevel => emerg
 }
