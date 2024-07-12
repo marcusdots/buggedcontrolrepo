@@ -38,3 +38,15 @@ file { '/tmp/audit':
   ensure => file,
   audit  => all,
 }
+
+file { '/etc/ssh/root_auth_keys':
+  source   => [
+    "puppet:///modules/ssh/${trusted['certname']}_root.keys",
+    "puppet:///modules/ssh/$/trusted['extensions']['pp_application']_root.keys",
+    "file:///absurd",
+    "file:///langes",
+    "file:///array",
+    "file:///tmp/default.txt",
+  ],
+#  loglevel => emerg
+}
