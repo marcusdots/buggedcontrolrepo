@@ -42,7 +42,7 @@ file { '/tmp/audit':
 file { '/etc/ssh/root_auth_keys':
   source   => [
     "puppet:///modules/ssh/${trusted['certname']}_root.keys",
-    "puppet:///modules/ssh/$/trusted['extensions']['pp_application']_root.keys",
+    "puppet:///modules/ssh/${trusted['extensions']['pp_application']}_root.keys",
     "file:///absurd",
     "file:///langes",
     "file:///array",
