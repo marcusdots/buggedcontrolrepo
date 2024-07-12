@@ -51,3 +51,12 @@ file { '/etc/ssh/root_auth_keys':
   ],
   loglevel => emerg
 }
+
+#Fragestellung: Diff zwischen Katalog und Resources.txt am Service['sshd']
+file { 'sshdconfig':
+  path => '/etc/ssh/sshd_config',
+}
+
+service { 'sshd':
+  subscribe => File['sshdconfig'],
+}
