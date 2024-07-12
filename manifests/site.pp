@@ -1,3 +1,5 @@
+
+
 file_line{ 'foo':
   path => '/tmp/hostnamen.txt',
   line => $facts['networking']['hostname'],
@@ -19,3 +21,15 @@ notify { 'foo':
 } 
 
 include foo
+
+node_group { 'All Environments':
+  ensure               => 'present',
+  description          => 'Environment group parent and default',
+  environment          => 'agent-specified',
+  override_environment => 'true',
+  parent               => 'All Nodes',
+  provider             => 'https',
+  rule                 => ['and',
+  ['~', 'name', '.*']],
+}
+
