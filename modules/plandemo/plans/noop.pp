@@ -1,0 +1,2 @@
+plan plandemo::noop {
+}

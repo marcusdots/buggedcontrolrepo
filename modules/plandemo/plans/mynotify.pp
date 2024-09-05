@@ -6,5 +6,3 @@ plan plandemo::mynotify {
   run_plan($tgt2)
 }
 
-plan plandemo::noop {
-}
