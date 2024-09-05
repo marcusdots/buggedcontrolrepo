@@ -1,3 +1,3 @@
 plan plandemo::mynotify {
-  notify('foo')
+  notice('foo')
 }
