@@ -1,0 +1,3 @@
+plan mynotify {
+  notify('foo')
+}
