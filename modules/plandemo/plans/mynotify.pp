@@ -1,3 +1,3 @@
-plan mynotify {
+plan plandemo::mynotify {
   notify('foo')
 }
