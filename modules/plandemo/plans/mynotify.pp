@@ -1,3 +1,3 @@
 plan plandemo::mynotify {
-  notice('foo')
+  notice('find me in the log')
 }
