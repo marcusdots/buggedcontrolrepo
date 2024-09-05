@@ -1,5 +1,5 @@
 plan plandemo::mynotify {
   notice('find me in the log')
-  $tgt = lookup('myplan', first, undef)
+  $tgt = lookup('myplan', String, 'first', undef)
   run_plan($tgt)
 }
