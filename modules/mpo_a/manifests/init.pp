@@ -1,6 +1,6 @@
 class mpo_a(){
   notify{ 'Klasse A geladen':}
-  require b
-  contain c
-  include d
+  require mpo_b
+  contain mpo_c
+  include mpo_d
 }
