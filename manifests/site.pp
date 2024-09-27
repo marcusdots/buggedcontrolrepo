@@ -7,5 +7,5 @@ notify { 'site.pp-foo':
 notify { 'site.pp-123':
 }
 
-include a
-include e
+include mpo_a
+include mpo_e
