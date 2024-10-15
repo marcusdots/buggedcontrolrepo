@@ -1,11 +1,8 @@
 
+# vcsrepo-once-versuche
 
-notify { 'site.pp-foo':
-  require => Notify['site.pp-123'],
+vcsrepo { '/root/github.com/bugged_ctl_repo':
+  provider => git,
+  source   => 'https://github.com/marcusdots/buggedcontrolrepo.git',
+  revision => 'vcsrepo_interval',
 }
-
-notify { 'site.pp-123':
-}
-
-include mpo_a
-include mpo_e
