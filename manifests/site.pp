@@ -11,4 +11,6 @@ schedule {'myhourly':
   period => hourly,
 }
 
-notify {'Sometimes you picture me': }
+notify {'Sometimes you picture me':
+  schedule => 'myhourly',
+ }
