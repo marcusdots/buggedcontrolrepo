@@ -1,0 +1,4 @@
+---
+  classes:
+#    - companystd
+    - profile::companystd
