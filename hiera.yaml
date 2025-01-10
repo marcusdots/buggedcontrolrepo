@@ -7,3 +7,6 @@ defaults:
 hierarchy:
   - name: all-there-is
     path: common.yaml
+  - name: per node basis
+    path: certname/%{trusted.certname}.yaml
+

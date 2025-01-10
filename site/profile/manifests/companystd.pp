@@ -6,3 +6,4 @@ class profile::companystd (
     notify{ $greeting: }
   }
 }
+
