@@ -5,8 +5,8 @@ defaults:
   data_hash: yaml_data
 
 hierarchy:
-  - name: all-there-is
-    path: common.yaml
   - name: per node basis
     path: certname/%{trusted.certname}.yaml
+  - name: kind of sane defaults
+    path: common.yaml
 
