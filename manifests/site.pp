@@ -1,26 +1,26 @@
 
 
-file_line{ 'foo':
-  path => '/tmp/hostnamen.txt',
-  line => $facts['networking']['hostname'],
+include openssl
+
+openssl::certificate::x509 { 'sample_x509':
+  ensure       => present,
+  base_dir     => '/tmp',
+  key_size     => 1024, #entropy in CI is limited
+  organization => 'voxpupuli',
 }
 
-@@file_line{ $facts['networking']['hostname']:
-  path => '/tmp/hostnamen_collector.txt',
-  line => $facts['networking']['hostname'],
-  tag  => 'kleine_kollekte',
+-> openssl::export::pkcs12 { 'export':
+  ensure  => 'present',
+  basedir => '/tmp',
+  pkey    => '/tmp/sample_x509.key',
+  cert    => '/tmp/sample_x509.crt',
 }
 
-File_line <<| tag == 'kleine_kollekte' |>>
-
-$query = "inventory[certname] { }"
-$nodes = puppetdb_query($query).map |$value| { $value["certname"] }
-notify { $nodes: }
-notify { 'foo':
-  message => puppetdb_query($query),
-} 
-
-include foo
+-> openssl::export::pem_key { 'key-UUID':
+  ensure   => present,
+  pfx_cert => '/tmp/export.p12',
+  pem_key  => '/tmp/key.pem',
+}
 
 node_group { 'All Environments':
   ensure               => 'present',
