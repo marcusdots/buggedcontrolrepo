@@ -24,4 +24,10 @@ rm -f puppet-enterprise-*.tar.gz
 cd puppet-enterprise-*-x86_64/
 ./puppet-enterprise-installer -c ~/pe.conf
 echo 'topsecret-thahj^oht3uph4ahSa0t' | puppet access login --username admin --lifetime=4y
+
+dnf install -y ruby
+yum groupinstall -y 'Development Tools'
+dnf install -y openssl-libs
+gem install bundler
+
 puppet infra console_password
