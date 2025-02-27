@@ -1,3 +1,3 @@
 node default {
-  notify{ $trusted.certname: }
+  notify{ $trusted['certname']: }
 }
