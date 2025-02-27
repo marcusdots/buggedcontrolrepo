@@ -1,5 +1,6 @@
 node pe.marcus.betadots.training {
   notify{ "Primary": }
+  include chrony
 }
 
 node /webserv./ {
