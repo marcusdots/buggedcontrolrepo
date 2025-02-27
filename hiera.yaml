@@ -4,6 +4,6 @@ defaults:
   datadir: data
   data_hash: yaml_data
 
-hierachy:
+hierarchy:
   - name: all-there-is
     path: common.yaml
