@@ -6,4 +6,8 @@ defaults:
 
 hierarchy:
   - name: all-there-is
-    path: common.yaml
+    paths: 
+      - "node/%{trusted.certname}.yaml"
+      - "datacenter/%{trusted.extensions.pp_datacenter}"
+      - common.yaml
+
