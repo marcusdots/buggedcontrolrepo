@@ -1,3 +1,3 @@
 mod 'puppetlabs/stdlib', :tag => '9.6.0'
 mod 'WhatsARanjit/node_manager', :tag => '0.8.0'
-mod 'puppet-augeasproviders_grub', '5.1.2'
+mod 'puppet/augeasproviders_grub', :tag => '5.1.2'
