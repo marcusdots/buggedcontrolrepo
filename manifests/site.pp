@@ -1,5 +1,6 @@
 
 
+
 file_line{ 'foo':
   path => '/tmp/hostnamen.txt',
   line => $facts['networking']['hostname'],
@@ -33,3 +34,4 @@ node_group { 'All Environments':
   ['~', 'name', '.*']],
 }
 
+include company::grub
